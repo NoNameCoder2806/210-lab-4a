@@ -9,6 +9,9 @@
 #include <iomanip>
 using namespace std;
 
+// Constants
+const int MAX_HUE = 256;
+
 // Color struct
 struct Color
 {
@@ -36,9 +39,9 @@ int main()
         Color c;
 
         // Create 3 random integers for the hue values
-        c.red = rand() % 256;      // Red
-        c.blue = rand() % 256;     // Blue
-        c.green = rand() % 256;    // Green
+        c.red = rand() % MAX_HUE;      // Red
+        c.blue = rand() % MAX_HUE;     // Blue
+        c.green = rand() % MAX_HUE;    // Green
 
         // Push the Color struct object into the vector
         v.push_back(c);
